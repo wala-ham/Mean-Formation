@@ -1,0 +1,80 @@
+<!DOCTYPE html > 
+<html > 
+<head> 
+<meta http-equiv="Content-type" content="text/html :charset=UTF-8"/>
+<title>Formulaire trait&eacute; par PHP</title>
+<style>
+fieldset {
+			width: 500px;
+			border: 2px solid #dcdcdc;
+			border-radius: 10px;
+			padding: 10px 20px;
+			text-align: leftt;
+		}
+</style>
+</head>
+<body>
+<form action="exemple7-14.php" method="post" enctype="multipart/form-data">
+<!-- premier groupe de composants-->
+<fieldset>
+<legend><b>Vos coordonn&eacute;es</b></legend>
+<table border="0">
+<tr><td><label>Nom :</label></td><td><input type="text" name="nom" size."40" maxlength="256" value="votre nom" /></td></tr>
+<tr><td><label>Pr&eacute;nom :</label></td><td><input type="text" name="prenom" size="40" maxlength="256" value="votre pr&eacute;nom" /></td></tr>
+<tr><td><label>Date de naissance :</label></td><td><input type="date" name="date max="1993-01-01"/></td></tr>
+<tr><td><label>Mail : </label></td><td><input type="email" name="mail" size="40" maxlength="256" value="votre mail" /></td></tr>
+<tr><td><label>Votre site : </label></td><td><input type="url" name="site value="http://www." /></td></tr>
+<tr><td><label>Code :</label></td><td><input type="password" name="code" size="40" maxlength="6" /></td></tr>
+<tr><td><label>Genre :</label></td>
+<td><input type="radio" name="sexe" value="homme"/> <label>Homme </label> <br />
+<input type="radio" name="sexe" value="femme" /><label>Femme</label> </td></tr>
+<tr><td><label>Pays :</label></td><td><select name="pays" size="1" tabindex="2" onfocus="this.style.color='red'"
+onchange="alert('Merci de votre choix')" onblur="this.style.color='black'">
+<option value="null">Votre pays</option>
+<optgroup label="Afrique">
+<option value="Tunis" > Tunis</option>
+<option value="Alg&eacute;rie" >Alg&eacute;rie</option>
+<option value="Maroc" >Maroc</option>
+<option value="Mauritanie" >Mauritanie</option>
+</optgroup>
+<optgroup label="Europe">
+<option value="France"> France</option>
+<option value="Belgique"> Belgique</option>
+<option value="Italie"> Italie</option>
+<option value="Allemagne"> Allemagne</option>
+</optgroup>
+<optgroup label="Am&eacute;rique">
+<option value="USA" label="fr" > USA </option>
+<option value ="Canada" > Canada</option>
+<option value ="Argentine" > Argentine</option>
+</optgroup>
+<optgroup label="Autres">
+<option value="Europerope">Europerope</option>
+<option value ="Asie">Asie</option>
+ <option value="Am&eacute;riques">Am&eacute;riques</option>
+<option value="Oc&eacute;anie"> Oc&eacute;anie</option>
+</optgroup>
+</select> </td></tr></table> </fieldset>
+<!-- Deuxième groupe de composants --> 
+<fieldset>
+<legend><b>Vos go&ucirc;ts</b></legend>
+<input type="checkbox" name="pomme" value="pomme" />Tarte aux fraises &agrave; la cr&egrave;me d'amandes<br/>
+<input type="checkbox" name="poire" value="poire" />Tarte aux prunes<br />
+<input type="checkbox" name="scoubidou" value="scoubidou" />Tarte rustique aux mirabelles de Lorraine, noisettes et miel<br />
+
+<textarea name="gouts" cols="50" rows="5" onclick="this.value=''">
+D&eacute;crivez vos go&ucirc;ts en d&eacute;tail 
+</textarea> <br />
+</fieldset>
+
+<!-- Troisième groupe de composants -->
+<fieldset> 
+<legend><b>Envoyez nous votre photo</b></legend>
+<input type="file" name="fichier" accept=" image/jpeg" />
+<input type="hidden" name="MAX_FILE_SIZE" value="10000" /> <br /><br />
+<input type="reset" value="Effacer" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Envoyer" /><br/>
+</fieldset>
+</form>
+</body>
+</html>
