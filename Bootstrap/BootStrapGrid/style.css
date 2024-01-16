@@ -1,0 +1,12 @@
+.item1 {
+  background-color: rgb(238, 128, 128);
+  border: 1px solid black;
+}
+.item2 {
+  background-color: rgb(128, 128, 239);
+  border: 1px solid black;
+}
+.item3 {
+  background-color: rgb(128, 233, 128);
+  border: 1px solid black;
+}
