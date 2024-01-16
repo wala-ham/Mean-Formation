@@ -1,0 +1,63 @@
+<p>directive works!</p>
+<!-- ngIF -->
+<p *ngIf="display == true"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo autem accusamus alias totam aut perspiciatis odio. Odio sapiente eaque magni, rem distinctio asperiores nobis similique consequuntur aut repudiandae? Quos, adipisci.</p>
+
+<!-- exIf -->
+<img *ngIf="displayImage == true"  [src]="url" alt=""> <br>
+<button (click)="displayImage = !displayImage">Play</button>
+
+<!-- ngFor -->
+<h1>{{fruits[0]}}</h1>
+<h1>{{fruits[1]}}</h1>
+<h1>{{fruits[2]}}</h1>
+
+<h1 *ngFor="let item of fruits">{{item}}</h1>
+<hr><hr>
+<!-- exFor -->
+<div *ngFor="let item of students">
+    <h1>{{item.name}}</h1>
+    <h3>{{item.age}}</h3>
+</div>
+
+<!-- EXERCICE IF+FOR -->
+
+<!-- FirstSoltuion -->
+<div *ngFor="let item of students">
+   <div *ngIf="item.age > 26">
+    <h1>{{item.name}}</h1>
+    <h3>{{item.age}}</h3>
+   </div>
+</div>
+
+<!-- SecondSolution -->
+<div *ngFor="let item of students">
+    <ng-container *ngIf="item.age > 26">
+        <h1>{{item.name}}</h1>
+        <h3>{{item.age}}</h3>
+    </ng-container>
+ </div>
+<hr>
+<!-- ngSwitch -->
+
+<ul [ngSwitch]="superhero">
+    <li *ngSwitchCase="'Groot'">Groot</li>
+    <li *ngSwitchCase="'Ironman'">Ironman</li>
+    <li *ngSwitchCase="'Hulk'">Hulk</li>
+    <li *ngSwitchCase="'Thor'">Thor</li>
+    <li *ngSwitchCase="'Spiderman'">Spiderman</li>
+    <li *ngSwitchDefault>Batman</li>
+  </ul>
+
+  <!-- ngStyle -->
+  <div [ngStyle]="{ 'background-color': user.bg}" >
+    <h1 [ngStyle]="{ 'color': user.color}">{{user.name}} </h1>
+    <p> {{ user.age }} </p>
+    </div>
+<hr><hr>
+    <!-- ngClass -->
+    <div *ngFor="let item of students" [ngClass]="{'bg-danger' : item.age <= 25,'bg-success' : item.age > 26}">
+      
+            <h1>{{item.name}}</h1>
+            <h3>{{item.age}}</h3>
+        
+     </div>
