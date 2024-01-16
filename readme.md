@@ -33,4 +33,7 @@ Follow these steps to get started with the formation:
 1. Clone this repository to your local machine.
    ```bash
    git clone  https://github.com/wala-ham/Mean-Formation.git
+
+![MEAN Stack Logo](https://example.com/path/to/mean_stack_logo.png)
+
     
