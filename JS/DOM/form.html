@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="form">
+        <label for="">username</label>
+        <input type="text" name="" id="username" />
+        <p id="usernameerror"></p>
+        <button type="submit">Envoyer</button>
+    </form>
+
+
+    <script>
+            /**
+            *  1- selection des elements (4 input+btn)
+            *  2-add click listener to the button 
+            *  3- verfication d'etat du champs 
+            * (valide : non vide , non vide & format , min length >=8 , )
+            *  4-display of messages 
+            * 
+            */
+        let form = document.getElementById("form");
+        let username = document.getElementById("username"); //balise
+        let usernameError = document.getElementById("usernameerror"); //<p
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            let usernameValue = username.value.trim();
+
+            if (usernameValue.length == 0) {
+                username.style.border="2px solid red"  
+                usernameError.innerText = "username empty !!! ";
+                usernameError.style.color = "red";
+            } else {
+                username.style.border="2px solid green"               
+                usernameError.innerText = " ";
+                /*
+                username.style.borderStyle = "solid";
+                username.style.borderWidth = "2px";
+                username.style.borderColor = "green";
+                */
+            }
+        });
+    </script>
+</body>
+
+</html>
+

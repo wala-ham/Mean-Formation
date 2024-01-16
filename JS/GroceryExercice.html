@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 2D array = An array of arrays
+
+        let fruits =     ["apples", "oranges", "bananas"];
+        let vegetables = ["carrots", "onions", "potatoes"];
+        let meats =      ["eggs", "chicken", "fish"];
+
+        let groceryList = [fruits, vegetables, meats];
+
+        groceryList[2][2] = "steak";
+
+        for(let list of groceryList){
+            for(let food of list){
+                console.log(food);
+            }
+        }
+    </script>
+</body>
+</html>

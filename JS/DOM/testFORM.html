@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire de Validation</title>
+  <style>
+    .error {
+        color: red;
+      }
+      
+      .success {
+        color: green;
+      }
+      
+  </style>
+</head>
+<body>
+  <form id="myForm">
+    <label for="name">Nom :</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+
+    <label for="email">Email :</label>
+    <input type="text" id="email" name="email" required>
+    <br>
+
+    <label for="password">Mot de passe :</label>
+    <input type="password" id="password" name="password" required>
+    <br>
+
+    <label for="confirmPassword">Confirmer le mot de passe :</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" required>
+    <br>
+
+    <input type="submit" value="Soumettre">
+  </form>
+
+  <div id="errorMessages"></div>
+
+  <script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Empêche le comportement par défaut du formulaire
+      
+        // Récupérer les valeurs des champs
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
+      
+        // Récupérer l'élément pour afficher les messages d'erreur
+        var errorMessages = document.getElementById("errorMessages");
+      
+        // Réinitialiser les messages d'erreur
+        errorMessages.innerHTML = '';
+      
+        // Validation des champs
+        if (name.trim() === '') {
+          displayError("Le nom ne peut pas être vide.");
+        } else if (name.length < 5) {
+          displayError("Le nom doit avoir au moins 5 caractères.");
+        }
+      
+        // Validation de l'email
+        var emailPattern = /\S+@\S+\.\S+/;
+        if (!emailPattern.test(email)) {
+          displayError("Veuillez saisir une adresse email valide.");
+        }
+      
+        // Validation du mot de passe
+        if (password.length < 8) {
+          displayError("Le mot de passe doit avoir au moins 8 caractères.");
+        }
+      
+        // Validation du champ de confirmation du mot de passe
+        if (confirmPassword !== password) {
+          displayError("Les mots de passe ne correspondent pas.");
+        }
+      
+        // Si aucune erreur, affichez un message de succès
+        if (errorMessages.innerHTML === '') {
+          displaySuccess("Formulaire soumis avec succès !");
+          // Réinitialiser le formulaire ici si nécessaire
+          document.getElementById("myForm").reset();
+        }
+      });
+      
+      
+      function displayError(message) {
+        var errorMessages = document.getElementById("errorMessages");
+        var errorMessageDiv = document.createElement("div");
+        errorMessageDiv.classList.add("error");
+        errorMessageDiv.textContent = message;
+        errorMessages.appendChild(errorMessageDiv);
+      }
+      
+      function displaySuccess(message) {
+        var errorMessages = document.getElementById("errorMessages");
+        var successMessageDiv = document.createElement("div");
+        successMessageDiv.classList.add("success");
+        successMessageDiv.textContent = message;
+        errorMessages.appendChild(successMessageDiv);
+      }
+      
+  </script>
+</body>
+</html>

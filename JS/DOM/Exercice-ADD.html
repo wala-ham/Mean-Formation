@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice HTML avec DOM</title>
+</head>
+
+<body>
+
+    <div id="conteneur">
+        
+        <!-- Le contenu sera ajouté ici par JavaScript -->
+    </div>
+
+    <script>
+        // Exercice : Ajout et Modification du Contenu HTML
+
+        // Sélectionne l'élément avec l'identifiant 'conteneur'
+        const conteneur = document.getElementById('conteneur');
+
+        // Ajoute du contenu HTML à l'élément conteneur
+        conteneur.innerHTML = '<p>Ceci est un paragraphe ajouté par JavaScript.</p>';
+        conteneur.innerHTML = '<p> Hello from Master Class</p>';
+
+
+        // Modifie le contenu d'un élément existant (par exemple, le texte du paragraphe)
+        const paragraphe = conteneur.querySelector('p');
+        if (paragraphe) {
+            paragraphe.textContent = 'Nouveau texte pour le paragraphe.';
+        }
+    </script>
+</body>
+
+</html>

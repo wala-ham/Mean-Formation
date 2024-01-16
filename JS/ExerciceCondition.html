@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let jourSemaine = prompt("Entrez le jour de la semaine").toLowerCase();
+        let ageClient = parseInt(prompt("Entrez l'âge du client"));
+
+        let prix;
+
+        switch (jourSemaine) {
+        case "lundi":
+        case "mardi":
+        case "mercredi":
+        case "jeudi":
+            if (ageClient >= 12) {
+            prix = 10;
+            } else {
+            prix = 5;
+            }
+            break;
+        case "vendredi":
+        case "samedi":
+        case "dimanche":
+            if (ageClient >= 12) {
+            prix = 12;
+            } else {
+            prix = 6;
+            }
+            break;
+        default:
+            console.log("Jour invalide");
+        }
+
+        if (prix !== undefined) {
+        console.log(`Le prix du billet pour un client de ${ageClient} ans le ${jourSemaine} est de ${prix}dt.`);
+        }
+
+    </script>
+</body>
+</html>

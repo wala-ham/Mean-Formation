@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function additionner(nombre1, nombre2) {
+            return nombre1 + nombre2;
+        }
+        function multiplier(nombre1, nombre2) {
+            return nombre1 + nombre2;
+        }
+        
+        function soustraire(nombre1, nombre2) {
+            return nombre1 - nombre2;
+        }
+        
+        function diviser(nombre1, nombre2) {
+            if (nombre2 !== 0) {
+                return nombre1 / nombre2;
+            } else {
+                console.error("Erreur : Division par zéro.");
+                return undefined;
+            }
+        }
+        
+        function calculatrice(operation, nombre1, nombre2) {
+            switch (operation) {
+                case 'addition':
+                    return additionner(nombre1, nombre2);
+                    break ;
+                case 'multiplication':
+                    return multiplier(nombre1, nombre2);
+                    break ;
+                case 'soustraction':
+                    return soustraire(nombre1, nombre2);
+                    break ;
+                case 'division':
+                    return diviser(nombre1, nombre2);
+                    break ;
+                default:
+                    console.error("Opération non prise en charge.");
+                    return undefined;
+            }
+        }
+        
+        // Exemple d'utilisation de la calculatrice
+        let resultatAddition = calculatrice('addition', 5, 3);
+        console.log(resultatAddition);  // Affichera 8
+
+        let resultatMultiplication = calculatrice('multiplication', 5, 3);
+        console.log(resultatMultiplication);  // Affichera 15
+        
+        let resultatSoustraction = calculatrice('soustraction', 8, 3);
+        console.log(resultatSoustraction);  // Affichera 5
+        
+        let resultatDivision = calculatrice('division', 10, 2);
+        console.log(resultatDivision);  // Affichera 5
+        
+        // Tentative d'une opération non prise en charge
+        let resultatInconnu = calculatrice('multiplication', 4, 2);
+        // La fonction affichera une erreur dans la console et renverra undefined
+        
+
+    </script>
+</body>
+</html>

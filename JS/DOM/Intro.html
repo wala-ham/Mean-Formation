@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myDiv"> Master Class</div>
+    <!-- <img src="rootTree.png" alt="" width="500px"; height="500px"> -->
+    
+    <script>
+        /*******ROOT TREE*******/
+        //The HTML DOM is a standard for how to get, change, add, or delete HTML elements.
+/*Document Object Model (API) An interface for changing the content of a page*/
+/*
+Documet is the access point ; 
+contains nodes , each node can contain an object ;
+This tree is a model
+*/
+
+console.log(document);
+console.dir(document);
+console.log(document.title);
+console.log(document.URL);
+
+
+document.title="Title goes here!";
+//document.location="http://www.google.com";
+
+
+document.body.style.backgroundColor = "skyblue";
+document.getElementById("myDiv").innerText = "Hello";
+document.getElementById("myDiv").innerHTML = "Hello World ! ";
+
+    </script>
+</body>
+</html>

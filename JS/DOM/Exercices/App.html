@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <h1>Paragraphe 1</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ducimus
+        dolores iure atque eius fugit aliquid exercitationem ratione vero ipsum
+        unde praesentium, magni consequatur possimus?
+    </p>
+
+    <h2>Pargaraphe 2</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis laborum
+        voluptates temporibus velit eaque aut dignissimos saepe veniam eveniet
+        totam!
+    </p>
+
+    <button id="btn1">change my name</button>
+    <button id="btn2">change my color</button>
+    <button id="btn3">change my background color</button>
+
+    <br><br>
+    <img src="car.jpg" alt="">
+
+    <script>
+        //selection of elements
+
+        let btn1 = document.getElementById("btn1");
+        let btn2 = document.getElementById("btn2");
+        let btn3 = document.getElementById("btn3");
+
+        //event + action
+
+        /**
+         * event (action) : click dbclick
+         * listener
+         */
+
+        // mouse event keyboard events(gaming)
+        let titre1 = document.getElementsByTagName("h1")[0]; //[]
+        titre1.addEventListener("mouseover", () => {
+            titre1.innerText = "My new text";
+            titre1.style.color = "pink";
+            titre1.style.textAlign = "center";
+        });
+
+        titre1.addEventListener("mouseout", () => {
+            titre1.innerText = "**********************";
+            titre1.style.color = "green";
+            titre1.style.textAlign = "center";
+        });
+
+        btn1.addEventListener("click", () => {
+            btn1.innerText = "hello everybody";
+        });
+
+        btn2.addEventListener("click", () => {
+            btn2.style.color = "#fff";
+            btn2.style.backgroundColor = "red";
+        });
+
+        btn2.addEventListener("dblclick", () => {
+            btn2.style.color = "#fff";
+            btn2.style.backgroundColor = "lightblue";
+        });
+
+        btn3.addEventListener("click", () => {
+            btn3.style.color = "#fff";
+            btn3.style.backgroundColor = "green";
+        });
+
+        let img = document.getElementsByTagName("img")[0];
+
+        img.addEventListener("click", () => {
+            img.src = "blueCar.jpg";
+            img.style.width = "500px";
+            img.style.height = "350px";
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>

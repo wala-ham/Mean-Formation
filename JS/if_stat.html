@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+// if statement = a basic form of decision making
+//                           if a condition is true, then do something
+//                           if not, then don't do it!
+
+let age = 21;
+
+if(age >= 18){
+    console.log("You are an adult!");
+}
+else if(age < 0){
+    console.log("YOU HAVEN'T BEEN BORN YET!");
+}
+else{
+    console.log("You are a child!");
+}
+
+/*
+let online = false;
+
+if(online){
+    console.log("You are online!");
+}
+else{
+    console.log("You are offline!");
+}
+*/
+
+
+/*-----------Ternaryy-----------*/
+// ternary operator = Shortcut for an 'if/else statement'
+//                                  Takes 3 operands
+ 
+//                    1. a condition with ?
+//                    2. expression if True :
+//                    3. expression if False
+ 
+// condition ? exprIfTrue : exprIfFalse
+ 
+let adult = checkAge(77);
+console.log(adult);
+ 
+function checkAge(age){
+    if(age > 18)
+    return true
+    else return false
+    //return (age>=18) ? "Adult!" : "Child!";
+    //return age >= 18? true : false;
+}
+/*
+checkWinner(false);
+ 
+function checkWinner(win){
+ 
+    win ? console.log("You win!") : console.log("You lose!");
+}
+*/
+    </script>
+</body>
+</html>

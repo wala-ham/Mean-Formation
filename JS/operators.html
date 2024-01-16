@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // = assignment operator
+        // == comparison operator
+        // === strict equality operator
+let x = "3.14";
+
+if(x === 3.14){
+    console.log("That is pi");
+}
+else{
+    console.log("That is NOT pi");
+}
+
+
+// Gives us the ability to check more than 1 condition concurrently
+// && AND (BOTH conditions must be true)
+// || OR (Either condition can be true)
+let temp = 15;
+let sunny = false;
+
+if(temp > 0 && temp < 30 && sunny){
+    console.log('The weather is good!');
+}
+else{
+    console.log('The weather is bad!');
+}
+
+
+// ! NOT logical operator
+// typically used to reverse a condition's boolean value
+// true -> false  false -> true
+
+let tempq = 15;
+let sunnyq = false;
+
+if(!(tempq > 0)){
+    console.log("It's cold outside");
+}
+else{
+    console.log("It's warm outside");
+}
+
+if(!sunnyq){
+    console.log("It's cloudy outside");
+}
+else{
+    console.log("It's sunny outside");
+}
+
+
+
+    </script>
+</body>
+</html>

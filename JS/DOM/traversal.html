@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="dom_traversal.png" alt="" width="500px" height="300px">
+    <ul id="fruit">
+        <li>apple</li>
+        <li>orange</li>
+        <li>banana</li>
+    </ul>
+    <ul id="vegetables">
+        <li>carrots</li>
+        <li>potatoes</li>
+        <li>onions</li>
+    </ul>
+    <ul id="dessert">
+        <li>ice cream</li>
+        <li>cake</li>
+        <li>pie</li>
+    </ul>
+    <script>
+        /*
+        let body = document.body;
+        let childOne=body.firstElementChild;
+        childOne.style.backgroundColor = "lightgreen";
+        console.log(childOne);
+        */
+        /*
+        let element = document.body;
+        let element = document.querySelector("#vegetables");
+        let child = element.firstElementChild;
+        child.style.backgroundColor = "lightgreen";
+        */
+
+        let element = document.querySelector("#fruit");
+        let children = Array.from(element.children);//element.children[0]
+        children.forEach(child => child.style.backgroundColor = "lightgreen");
+        
+
+        
+
+// .firstElementChild
+// .lastElementChild
+// .parentElement
+// .nextElementSibling
+// .previousElementSibling
+// .children[]
+// Array.from(.children)
+
+    </script>
+</body>
+</html>

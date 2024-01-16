@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    /*
+    With functions you can reuse code
+
+You can write code that can be used many times.
+
+You can use the same code with different arguments, to produce different results.
+    */
+        //function = Define code once, and use it many times.
+// 
+/*                  To perform some code, call the function name.
+let userName="Wala"
+console.log(`la somme egale à `,Somme(5,3));
+Somme(5,6);
+function Somme(num1,num2){
+    //console.log("username est"+userName+" egale ",num1+num2);
+    return num1+num2;
+}
+startProgram();
+
+function startProgram(){
+    let userName = "Bro";
+    let age = 21;
+    
+    happyBirthday(userName, age);
+}
+
+function happyBirthday(userName, age){
+    console.log("Happy birthday dear", userName);
+    console.log("You are", age,"years old!");
+    console.log("Happy birthday to you!");
+}
+*/
+/*-----Exercice SUrface*/
+// return = returns a value back to the place 
+//               where you invoked a function
+
+let area;
+let width;
+let height;
+
+height = window.prompt("Enter height");
+width = window.prompt("Enter width");
+
+
+area = getArea(width, height);
+console.log("The area is:", area);
+
+function getArea(width, height){
+    return width * height;
+}
+
+    </script>
+</body>
+</html>
